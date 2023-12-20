@@ -1,0 +1,21 @@
+.post {
+  max-width: 700px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.post h1 {
+  font-size: 3.5em;
+  margin-top: 80px;
+}
+.post h2 {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.html {
+  margin-top: 40px;
+}
+.featured {
+  margin-bottom: 40px;
+}

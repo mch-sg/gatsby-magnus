@@ -8,5 +8,33 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
+  plugins: [
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        // The unique name for each instance
+        name: `work`,
+        // Path to the directory
+        path: `${__dirname}/src/work/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+  ],
+  siteMetadata: {
+    title: "---",
+    description: "Some random description",
+    copyright: 'Copyright 2024 Magnus Hvidtfeldt',
+    author: 'Magnus Chr. Hvidtfeldt',
+    contact: 'magnus.hvidtfeldt@gmail.com'
+  }
 }
