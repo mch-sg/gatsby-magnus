@@ -1,7 +1,8 @@
 ---
 title: "How to integrate ESG data"
-stack: Gatsby & Shopify
-slug: real-kitchen-food
+slug: esg-integration
+category: "Site"
+status: "draft"
 date: "2022-05-19"
 thumb: ../images/thumbs/coffee.png
 featuredImg: ../images/featured/coffee-banner.png

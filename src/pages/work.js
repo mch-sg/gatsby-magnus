@@ -34,11 +34,14 @@ export default function Work({ data }) {
 // export page query
 export const query = graphql`
 query WorkPage {
-  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 25) {
+  allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {status: {eq: "draft"}, category: {eq: "Site"}}}
+    limit: 25
+    ) {
     nodes {
       frontmatter {
         slug
-        stack
         title
         date
         thumb {

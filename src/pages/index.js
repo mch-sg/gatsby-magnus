@@ -4,6 +4,19 @@ import * as styles from "../styles/home.module.css"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
+export const Head = () => {
+  <>
+    <title>Magnus Hvidtfeldt</title>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="Magnus Hvidtfeldt's website." />
+    <meta name="keywords" content="Build-in-public solopreneur startups blog" />
+    <meta name="author" content="Magnus Chr. Hvidtfeldt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:locale" content="en_US"></meta>
+  </>
+}
+
 export default function Home({ data }) {
   const image = getImage(data.file.childImageSharp.gatsbyImageData)
 
@@ -15,7 +28,7 @@ export default function Home({ data }) {
           <h3>My name is Alex and I'm a software engineer.</h3>
           <Link className={styles.btn} to="/work">My work</Link>
         </div>
-        <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="banner"/>
+        {/* <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
 
       </section>
     </Layout>

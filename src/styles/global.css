@@ -24,6 +24,7 @@ body {
 }
 
 p {
+  letter-spacing: 0.05ch;
   margin: 16px auto;
   line-height: 1.75em;
   font-weight: 300;

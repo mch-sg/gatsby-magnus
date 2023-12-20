@@ -31,7 +31,6 @@ query BlogPost($slug: String) {
       html
       frontmatter {
         title
-        stack
         date
         featuredImg {
           childImageSharp {

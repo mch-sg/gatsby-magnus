@@ -1,7 +1,8 @@
 ---
 title: "Building takes time"
-stack: Next.js
 slug: the-drum-stop
+category: "Site"
+status: "public"
 date: "2011-12-19"
 thumb: ../images/thumbs/coffee.png
 featuredImg: ../images/featured/coffee-banner.png

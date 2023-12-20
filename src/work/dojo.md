@@ -1,7 +1,8 @@
 ---
 title: "Slow growth and health"
-stack: HTML, CSS, JavaScript
 slug: dojo
+category: "Site"
+status: "public"
 date: "2022-12-19"
 thumb: ../images/thumbs/coffee.png
 featuredImg: ../images/featured/coffee-banner.png
