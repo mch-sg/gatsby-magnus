@@ -2,7 +2,7 @@
 title: "Building takes time"
 slug: the-drum-stop
 category: "Site"
-status: "public"
+status: "draft"
 date: "2011-12-19"
 thumb: ../images/thumbs/coffee.png
 featuredImg: ../images/featured/coffee-banner.png

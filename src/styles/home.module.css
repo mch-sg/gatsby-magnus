@@ -21,15 +21,15 @@
 .btn {
   display: inline-block;
   color: var(--background);
-  background: #b392ac;
+  background: var(--tertiary);
   padding: 10px 16px;
-  border-radius: 7.5px;
+  border-radius: 5px;
   margin-top: 20px;
   font-weight: 400;
   transition: 0.1s;
 }
 
 .btn:hover {
-  background: #a07a98;
+  background: var(--tertiaryHvr);
   color: var(--background);
 }

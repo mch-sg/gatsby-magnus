@@ -36,7 +36,7 @@ export const query = graphql`
 query WorkPage {
   allMarkdownRemark(
     sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {status: {eq: "draft"}, category: {eq: "Site"}}}
+    filter: {frontmatter: {status: {eq: "public"}, category: {eq: "Site"}}}
     limit: 25
     ) {
     nodes {

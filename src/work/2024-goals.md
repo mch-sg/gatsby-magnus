@@ -2,7 +2,7 @@
 title: "2024 Goals"
 slug: 2024-goals
 category: "Site"
-status: "draft"
+status: "public"
 date: "2023-12-19"
 thumb: ../images/thumbs/coffee.png
 featuredImg: ../images/featured/coffee-banner.png
