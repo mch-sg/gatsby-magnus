@@ -18,7 +18,7 @@ export default function Work({ data }) {
               {works.map(work => (
                 <Link to={"/blog/" + work.frontmatter.slug} key={work.id}>
                   <div>
-                    <GatsbyImage className="image" image={getImage(work.frontmatter.thumb.childImageSharp.gatsbyImageData)} alt="Banner" />
+                    {/* <GatsbyImage className="image" image={getImage(work.frontmatter.thumb.childImageSharp.gatsbyImageData)} alt="Banner" /> */}
                     <h3>{ work.frontmatter.title }</h3>
                     <p>{ work.frontmatter.date }</p>
                   </div>

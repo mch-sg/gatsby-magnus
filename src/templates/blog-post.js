@@ -6,20 +6,22 @@ import { graphql } from 'gatsby'
 
 export default function BlogPost({ data }) {
     const { html } = data.markdownRemark;
-    const { title, stack, featuredImg, date } = data.markdownRemark.frontmatter;
+    const { title, featuredImg, date } = data.markdownRemark.frontmatter;
  
     return (
     <Layout>
     <div className={styles.post}>
-            <h1>{title}</h1>
-            {/* <h2>{stack}</h2> */}
-            <h2>{date}</h2>
+            {/* <hr /> */}
+            <h1 style={{marginTop: "80px"}}>{title}</h1>
+            {/* <h2>{Subtext}</h2> */}
+            <h2 style={{color: "var(--secondarygrey)", marginBottom: "40px"}}>{date}</h2>
 
             <div className={styles.featured}>
-            {<GatsbyImage className="image" image={getImage(featuredImg.childImageSharp.gatsbyImageData)} alt="Banner" />}
+            <hr />
+            {/* {<GatsbyImage className="image" image={getImage(featuredImg.childImageSharp.gatsbyImageData)} alt="Banner" />} */}
             </div>
 
-            <div className={styles.html} dangerouslySetInnerHTML={{ __html: html }} />
+            <div style={{marginBottom: "80px"}} className={styles.html} dangerouslySetInnerHTML={{ __html: html }} />
         </div>
     </Layout>
   )

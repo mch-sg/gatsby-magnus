@@ -2,8 +2,12 @@
 
 :root {
   --primary: #f3f3f3;
-  --secondary: #8e8e8e;
+  --secondary: #7b7b7b;
+  --secondarygrey: #b8b8b8;
+  --tertiary: #b392ac;
+  --grey: #444444;
   --background: #121212;
+  --maxW: 700px;
 }
 
 * {
@@ -28,6 +32,8 @@ p {
   margin: 16px auto;
   line-height: 1.75em;
   font-weight: 300;
+  margin-bottom: 35px;
+  color: var(--secondarygrey);
 }
 
 .layout {
@@ -75,7 +81,7 @@ nav a:hover {
 
 footer p {
   text-align: center;
-  color: var(--secondary);
+  color: var(--grey);
   margin: 40px auto;
 }
 
@@ -88,4 +94,12 @@ footer p {
 ::selection {
   color: var(--background);
   background: #b392ac;
+}
+
+hr {
+  border: 0;
+  height: 0.05ch;
+  background: var(--grey);
+  margin: 20px auto;
+  width: 100%;
 }

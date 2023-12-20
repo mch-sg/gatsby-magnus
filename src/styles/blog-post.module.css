@@ -1,17 +1,26 @@
 .post {
-  max-width: 700px;
+  max-width: var(--maxW);
   margin: 0 auto;
   align-items: center;
 }
 
 .post h1 {
-  font-size: 3.5em;
-  margin-top: 80px;
+  font-size: 2em;
+  /* margin-top: 80px; */
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 .post h2 {
-  font-size: 2em;
+  color: var(--primary);
+  font-size: 1.5em;
   font-weight: 400;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
+}
+.post h3 {
+  color: var(--primary);
+  font-size: 1.17em;
+  font-weight: 400;
+  margin-bottom: 5px;
 }
 .html {
   margin-top: 40px;

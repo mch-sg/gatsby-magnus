@@ -1,4 +1,6 @@
 .work {
+  /* max-width: var(--maxW);
+  margin: 0 auto; */
   text-align: center;
 }
 .work > h2 {
