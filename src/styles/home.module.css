@@ -1,0 +1,35 @@
+.header {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px; */
+  max-width: 700px;
+  margin: 0 auto;
+  align-items: center;
+  /* text-align: center; */
+}
+.header h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 2;
+}
+.header h3 {
+  color: var(--secondary);
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.btn {
+  display: inline-block;
+  color: var(--background);
+  background: #b392ac;
+  padding: 10px 16px;
+  border-radius: 7.5px;
+  margin-top: 20px;
+  font-weight: 400;
+  transition: 0.1s;
+}
+
+.btn:hover {
+  background: #a07a98;
+  color: var(--background);
+}

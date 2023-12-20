@@ -1,0 +1,31 @@
+.work {
+  text-align: center;
+}
+.work > h2 {
+  font-size: 3em;
+  margin-top: 0px;
+}
+.work > h3 {
+  font-size: 2em;
+  font-weight: 400;
+}
+.workId {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  margin: 50px 20px;
+}
+.workId h3 {
+  text-align: center;
+  margin: 20px auto 0px;
+  font-weight: 500;
+}
+.workId p {
+  color: #ccc;
+  margin-top: 4px;
+}
+
+.image {
+  width: 10px;
+  height: 100%;
+}
