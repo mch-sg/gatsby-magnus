@@ -1,9 +1,14 @@
 ---
 title: "2024 Goals"
 slug: 2024-goals
-category: "Site"
+category: "Business"
 status: "public"
+
 date: "2023-12-19"
+dd: "19"
+mm: "Dec"
+yy: "2023"
+
 thumb: ../images/thumbs/coffee.png
 featuredImg: ../images/featured/coffee-banner.png
 ---

@@ -31,7 +31,7 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "---",
+    title: "Magnus",
     description: "Some random description",
     copyright: 'Copyright 2024 Magnus Hvidtfeldt',
     author: 'Magnus Chr. Hvidtfeldt',

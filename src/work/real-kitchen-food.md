@@ -1,9 +1,14 @@
 ---
 title: "How to integrate ESG data"
 slug: esg-integration
-category: "Site"
+category: "Coding"
 status: "public"
+
 date: "2022-05-19"
+dd: "19"
+mm: "May"
+yy: "2022"
+
 thumb: ../images/thumbs/coffee.png
 featuredImg: ../images/featured/coffee-banner.png
 ---

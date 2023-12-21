@@ -24,8 +24,8 @@ export default function Home({ data }) {
     <Layout>
       <section className={styles.header}>
         <div>
-          <h2>Magnus Hvidtfeldt</h2>
-          <h3>My name is Alex and I'm a software engineer.</h3>
+          <h1 className="initHeading">Magnus Hvidtfeldt</h1>
+          <h3>I'm a software engineer and entrepreneur.</h3>
           <Link className={styles.btn} to="/work">My work</Link>
         </div>
         {/* <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
