@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
             {/* <hr /> */}
             {/* {<GatsbyImage className="image" image={getImage(featuredImg.childImageSharp.gatsbyImageData)} alt="Banner" />} */}
             </div>
-
+            <div className={styles.html}>
                 <p style={{marginBottom: "50px"}}>
                 At magnus.so, accessible from <a href="https://www.magnus.so" target="_blank">https://www.magnus.so</a>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by magnus.so and how we use it.
                 
@@ -134,6 +134,7 @@ export default function PrivacyPolicy() {
                 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:privacy@magnus.so" 
                 target="_blank">privacy@magnus.so</a>.
                 </p>
+            </div>
             </div>
         </Layout>
       )

@@ -24,6 +24,7 @@
 .post h3 {
   color: var(--primary);
   font-size: 1.17em;
+  letter-spacing: 0.05ch;
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -32,17 +33,6 @@
 }
 .featured {
   margin-bottom: 40px;
-}
-
-a {
-  color: var(--secondary);
-  text-decoration: none;
-  /* font-weight: 400; */
-  transition: 0.1s;
-}
-
-a:hover {
-  color: var(--tertiary);
 }
 
 .res {
@@ -57,5 +47,30 @@ a:hover {
 }
 
 li {
-  color: var(--tertiary);
+  color: var(--secondary);
+}
+
+.html a {
+  transition: 0.1s;
+  text-decoration-color: var(--grey);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+  background-position: 0 100%;
+  background-size: 100% 3px;
+
+  color: var(--link);
+}
+
+.html a:hover {
+  /* background-size: 100% 88% !important; */
+
+  /* background-image: linear-gradient(
+    to right,
+    var(--secondarygrey) 0%,
+    var(--secondarygrey) 100%
+  ); */
+  /* text-decoration: underline wavy #343434; */
+  text-decoration-color: var(--secondary);
+  /* color: var(--secondary); */
 }

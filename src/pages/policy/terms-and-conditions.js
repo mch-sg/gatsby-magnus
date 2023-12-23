@@ -19,7 +19,7 @@ export default function TermsAndCondition() {
             {/* <hr /> */}
             {/* {<GatsbyImage className="image" image={getImage(featuredImg.childImageSharp.gatsbyImageData)} alt="Banner" />} */}
             </div>
-
+            <div className={styles.html}>
                 <p style={{marginBottom: "50px"}}>
                 Welcome to magnus.so!
                 <br /><br />
@@ -142,9 +142,10 @@ export default function TermsAndCondition() {
 
                 <h2 style={{marginBottom: "15px"}}>Contact Us</h2>
                 <p style={{marginBottom: "50px"}}>
-                If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:privacy@magnus.so" 
+                If you have any questions or suggestions about our Terms and Conditions, do not hesitate to contact us at <a href="mailto:privacy@magnus.so" 
                 target="_blank">privacy@magnus.so</a>.
                 </p>
+            </div>
             </div>
         </Layout>
       )
