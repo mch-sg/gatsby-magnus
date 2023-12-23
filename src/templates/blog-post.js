@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/Seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "../styles/blog-post.module.css"
 import { graphql } from 'gatsby'
@@ -12,6 +13,7 @@ export default function BlogPost({ data }) {
     
     return (
     <Layout>
+    <SEO title={title} />
     <div className={styles.post}>
           {/* 
           className={styles.res}

@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-image',
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,7 +32,7 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "Magnus",
+    title: "Magnus Hvidtfeldt",
     description: "Some random description",
     copyright: 'Copyright 2024 Magnus Hvidtfeldt',
     author: 'Magnus Chr. Hvidtfeldt',

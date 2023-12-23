@@ -1,11 +1,13 @@
 import * as React from "react"
 import Layout from "../../components/Layout"
+import SEO from "../../components/Seo"
 import * as styles from "../../styles/blog-post.module.css"
 import { Link, graphql } from "gatsby"
 
 export default function PrivacyPolicy() {
     return (
         <Layout>
+        <SEO title="Privacy Policy" />
             <div className={styles.post}>
             {/* 
             className={styles.res}

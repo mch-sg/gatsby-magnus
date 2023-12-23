@@ -16,6 +16,8 @@ export default function Layout({ children }) {
             {/* <p>2024 © Magnus Hvidtfeldt</p> */}
             <p>© 2021-2024 Magnus Hvidtfeldt. All Rights Reserved. <br />
               www.magnus.so v.2024.01</p>
+            {/* <p></p>
+            <p></p> */}
 
             <div className="links">
                 <h3 style={{fontWeight:"500", marginBottom: "10px"}}>Categories</h3>
