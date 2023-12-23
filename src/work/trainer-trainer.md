@@ -1,7 +1,8 @@
 ---
 title: "To each his own"
-stack: Gatsby & Shopify
 slug: trainer-trainer
+category: "Site"
+status: "draft"
 date: "1998-12-19"
 thumb: ../images/thumbs/coffee.png
 featuredImg: ../images/featured/coffee-banner.png

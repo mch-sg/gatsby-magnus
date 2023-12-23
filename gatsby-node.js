@@ -19,4 +19,23 @@ exports.createPages = async ({ graphql, actions }) => {
         context: { slug: node.frontmatter.slug },
         })
     })
+    const catTemplate = require.resolve(`./src/templates/category-template.js`)
+    const resa = await graphql(`
+        query BlogFindCat {
+        allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+            nodes {
+            frontmatter {
+                category
+            }
+            }
+        }
+        }
+    `)
+    resa.data.allMarkdownRemark.nodes.forEach((node) => {
+        createPage({
+        path: `/category/${node.frontmatter.category}`,
+        component: catTemplate,
+        context: { category: node.frontmatter.category },
+        })
+    })
 }
