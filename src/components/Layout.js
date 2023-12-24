@@ -16,6 +16,8 @@ export default function Layout({ children }) {
             {/* <p>2024 © Magnus Hvidtfeldt</p> */}
             <p>© 2021-2024 Magnus Hvidtfeldt. All Rights Reserved. <br />
               www.magnus.so v.2024.01</p>
+            {/* <p></p>
+            <p></p> */}
 
             <div className="links">
                 <h3 style={{fontWeight:"500", marginBottom: "10px"}}>Categories</h3>
@@ -38,8 +40,6 @@ export default function Layout({ children }) {
                 <Link to="https://github.com/mch-sg"  target="_blank">GitHub</Link> <br/>
                 <Link to="https://www.linkedin.com/in/magnushvidtfeldt/"  target="_blank">LinkedIn</Link> <br/>
                 <Link to="https://youtube.com/@magnushvidtfeldt" target="_blank">YouTube</Link> <br/>
-                <Link to="/blog" target="_blank">Newsletter</Link> <br/>
-                <Link to="/blog" target="_blank">Contact</Link> 
             </div>
         </footer>
     </div>

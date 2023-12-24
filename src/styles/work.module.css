@@ -71,3 +71,12 @@ a h3:hover {
   background: var(--res);
   border-radius: 10px;
 }
+
+@media only screen and (max-width: 824px) {
+  .workId {
+    display: grid;
+    grid-template-columns: 2fr 0.25fr 1fr;
+    grid-gap: 10px; /* 50px */
+    /* margin: 10px; 50px 20px */
+  }
+}

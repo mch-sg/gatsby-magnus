@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 import * as styles from "../styles/work.module.css"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -14,6 +15,7 @@ export default function Work({ data }) {
   
   return (
     <Layout>
+    <SEO title="Previous articles" />
         <div className={styles.work}>
             <h1 className="initHeading" style={{marginBottom: "80px"}}>Previous articles</h1>
 

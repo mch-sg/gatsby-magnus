@@ -14,22 +14,95 @@
 }
 .header h3 {
   color: var(--secondary);
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 400;
-  margin-bottom: 10px;
+  letter-spacing: 0.025ch;
+  /* margin-bottom: 10px; */
 }
 .btn {
+  font-size: 1em;
   display: inline-block;
   color: var(--background);
-  background: var(--tertiary);
-  padding: 10px 16px;
+  background: var(--secondarygrey);
+  padding: 15px;
   border-radius: 5px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-weight: 400;
   transition: 0.1s;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--tertiaryHvr);
+  background: var(--secondary);
   color: var(--background);
+}
+
+.inputForm {
+  padding: 15px;
+  background: var(--res);
+  color: var(--secondary);
+  border: none;
+  border-radius: var(--border);
+  /* border: 1px solid var(--primary); */
+  font-size: 1em;
+  transition: 0.1s ease-in-out;
+}
+
+::placeholder {
+  color: var(--secondary);
+}
+
+input {
+  transition: 0.1s !important;
+  /* outline: none !important; */
+  outline: 0.1ch solid rgb(42, 42, 42);
+}
+
+input:focus {
+  /* transition: 0.1s; */
+  outline: 1px solid var(--secondary) !important;
+}
+
+input:hover {
+  /* transition: 0.1s; */
+  outline: 1px solid rgb(77, 77, 77);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* transition: 0.1s; */
+  -webkit-box-shadow: 0 0 0 30px var(--secondarygrey) inset !important;
+  -webkit-text-fill-color: var(--secondary) !important;
+  outline: 1px solid rgb(77, 77, 77);
+}
+
+input:-webkit-autofill:placeholder {
+  color: var(--background);
+}
+
+.formGrid {
+  margin: 0 auto;
+  max-width: var(--maxW);
+  padding: 15px 0px;
+  border-radius: var(--border);
+  /* background: var(--res); */
+  display: grid;
+  grid-template-columns: 1fr 0.35fr;
+  grid-gap: 15px;
+  /* margin-top: 10px; */
+}
+
+.formNoGrid {
+  margin: 0 auto;
+  max-width: var(--maxW);
+  padding: 15px 0px;
+  border-radius: var(--border);
+  /* background: var(--res); */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+  /* margin-top: 10px; */
 }
