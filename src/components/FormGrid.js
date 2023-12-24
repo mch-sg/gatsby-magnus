@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from "../components/Layout"
+import Layout from "./Layout"
 import * as styles from "../styles/home.module.css"
 import { Link, graphql } from 'gatsby'
 
-export default function MyForm({ data }) { 
+export default function FormGrid({ data }) { 
 
   return (
       <div>
@@ -15,7 +15,7 @@ export default function MyForm({ data }) {
           
           <div data-style="clean"><ul data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false"><div>
         
-          <div className={styles.formNoGrid}>
+          <div className={styles.formGrid}>
           <input className={styles.inputForm} name="email_address" aria-label="Email Address" placeholder="Email Address *" required type="email" />
         
           <button data-element="submit" className={styles.btn}><div><div></div><div></div><div></div></div>Subscribe</button></div><div></div></div>

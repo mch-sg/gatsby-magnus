@@ -14,8 +14,9 @@
 }
 .header h3 {
   color: var(--secondary);
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 400;
+  letter-spacing: 0.025ch;
   /* margin-bottom: 10px; */
 }
 .btn {
@@ -60,7 +61,7 @@ input {
 
 input:focus {
   /* transition: 0.1s; */
-  outline: 1px solid rgb(77, 77, 77);
+  outline: 1px solid var(--secondary) !important;
 }
 
 input:hover {
@@ -72,10 +73,14 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  transition: 0.1s;
-  -webkit-box-shadow: 0 0 0 30px var(--res) inset !important;
+  /* transition: 0.1s; */
+  -webkit-box-shadow: 0 0 0 30px var(--secondarygrey) inset !important;
   -webkit-text-fill-color: var(--secondary) !important;
-  outline: 1px solid var(--tertiary);
+  outline: 1px solid rgb(77, 77, 77);
+}
+
+input:-webkit-autofill:placeholder {
+  color: var(--background);
 }
 
 .formGrid {
@@ -85,7 +90,19 @@ input:-webkit-autofill:active {
   border-radius: var(--border);
   /* background: var(--res); */
   display: grid;
-  grid-template-columns: 1fr 0.3fr;
+  grid-template-columns: 1fr 0.35fr;
+  grid-gap: 15px;
+  /* margin-top: 10px; */
+}
+
+.formNoGrid {
+  margin: 0 auto;
+  max-width: var(--maxW);
+  padding: 15px 0px;
+  border-radius: var(--border);
+  /* background: var(--res); */
+  display: grid;
+  grid-template-columns: 1fr;
   grid-gap: 15px;
   /* margin-top: 10px; */
 }

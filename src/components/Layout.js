@@ -40,8 +40,6 @@ export default function Layout({ children }) {
                 <Link to="https://github.com/mch-sg"  target="_blank">GitHub</Link> <br/>
                 <Link to="https://www.linkedin.com/in/magnushvidtfeldt/"  target="_blank">LinkedIn</Link> <br/>
                 <Link to="https://youtube.com/@magnushvidtfeldt" target="_blank">YouTube</Link> <br/>
-                <Link to="/blog" target="_blank">Newsletter</Link> <br/>
-                <Link to="/blog" target="_blank">Contact</Link> 
             </div>
         </footer>
     </div>

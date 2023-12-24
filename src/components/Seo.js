@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import favIcon from "../images/favicon.png"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, author }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -42,6 +42,17 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          charset: `UTF-8`,
+        },
+        {
+          name: `keywords`,
+          content: 'Build-in-public technology solopreneur startups blog',
+        },
+        {
+          name: `author`,
+          content: author,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -68,6 +79,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `og:locale`,
+          content: 'en_US',
         },
       ].concat(meta)}
     />
