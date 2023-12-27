@@ -6,37 +6,27 @@ import SEO from "../components/Seo"
 import * as styles from "../styles/home.module.css"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import * as styles1 from "../styles/work.module.css"
+import { format } from 'react-string-format';
 
 export default function Home({ data }) {
-  // const image = getImage(data.file.childImageSharp.gatsbyImageData)
 
   return (
-    <Layout>
-      <SEO title="Home" />
-      <section className={styles.header}>
-        <div>
-          <h1 className="initHeading">Magnus Hvidtfeldt</h1>
-          <h3 style={{marginBottom: "20px"}}>I'm a software engineer and entrepreneur.</h3>
-          {/* <Link className={styles.btn} to="/work">My work</Link> */}
+    <>
+    <div  className="bod">
+    <SEO title="Home" />
+    <section className={styles.header} style={{margin: "20px", maxWidth: "600px"}}>
+      <div>
+        <h1 className="initHeading">Coming soon.</h1>
+        <h3 style={{marginBottom: "20px"}}>In the meantime, feel free to join my newsletter. Every week, I share my learnings from building a startup business. You will learn how to leverage your newsletter, and how to make friends by building in public.</h3>
 
-          {/* <h3 style={{marginTop: "15px"}}>Join my newsletter!</h3> */}
-          <FormGrid />
-        </div>
+        <MyForm />
+        <h3 style={{marginBottom: "20px", fontSize: "1em", color: "var(--grey)"}}>Join 140+ other entrepreneurs.</h3>
+      </div>
 
-        {/* <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
-
-      </section>
-    </Layout>
+    </section>
+    </div>
+    </>
   )
 }
 
-
-export const query = graphql`
-  query MyQuery {
-    file(relativePath: { eq: "banner.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
-      }
-    }
-  }
-`

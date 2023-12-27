@@ -7,6 +7,11 @@
   align-items: center;
   /* text-align: center; */
 }
+.header section {
+  text-align: center; /* Horizontally center the content within the section */
+  max-width: 600px; /* Adjust the max-width as needed */
+  margin: auto; /* Center the section horizontally */
+}
 .header h2 {
   font-size: 1.2em;
   font-weight: 500;
@@ -90,7 +95,7 @@ input:-webkit-autofill:placeholder {
   border-radius: var(--border);
   /* background: var(--res); */
   display: grid;
-  grid-template-columns: 1fr 0.35fr;
+  grid-template-columns: 1fr 0.3fr;
   grid-gap: 15px;
   /* margin-top: 10px; */
 }
