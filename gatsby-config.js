@@ -14,22 +14,17 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-image',
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     // The unique name for each instance
-    //     name: `work`,
-    //     // Path to the directory
-    //     path: `${__dirname}/src/work/`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/images/`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-JH0TZ6Y6X4" // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
   siteMetadata: {
     title: "Magnus Hvidtfeldt",

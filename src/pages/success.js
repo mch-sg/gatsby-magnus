@@ -14,7 +14,7 @@ export default function Success({ data }) {
   return (
     <>
     <div  className="bod">
-    <SEO title="Home" />
+    <SEO title="Thank you" />
     <section className={styles.header}  style={{margin: "20px", maxWidth: "600px"}}>
       <div>
         <h1 className="initHeading">Thank you for signing up. Check your email to confirm your subscription.</h1>
