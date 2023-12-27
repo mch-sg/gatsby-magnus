@@ -30,7 +30,19 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-JH0TZ6Y6X4" // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
+  
   siteMetadata: {
     title: "Magnus Hvidtfeldt",
     description: "Some random description",

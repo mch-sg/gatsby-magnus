@@ -20,9 +20,9 @@ export default function Navbar() {
         <h1 className="nav-left">Magnus</h1>
         <div className="links">
             <Link to="/">Home</Link> 
+            <Link to="/article">Articles</Link> 
             <Link to="/work">Work</Link> 
-            <Link to="/blog">Newsletter</Link> 
-            <Link to="/blog">Contact</Link> 
+            <Link to="/newsletter">Newsletter</Link> 
         </div>
     </nav>
   )

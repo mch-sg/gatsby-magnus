@@ -20,7 +20,7 @@ export default function BlogPost({ data }) {
           */}
           <div style={{marginTop: "80px", marginBottom: "30px"}}>
             {/* <hr /> */}
-            <h2 style={{color: "var(--secondary)", marginTop: "0px", fontSize: "1em"}}>{format('{0} {1}, {2}', dd, mm, yy) } in <a href={"/category/" + category}>{category}</a></h2>
+            <h2 style={{color: "var(--secondary)", marginTop: "0px", fontSize: "1em"}}>{format('{1} {0}, {2}', dd, mm, yy) } in <a href={"/category/" + category}>{category}</a></h2>
             <h1 style={{marginBottom: "0px"}}>{title}</h1>
             {/* <h3 style={{color: "var(--secondarygrey)", marginTop: "0px", fontSize: "1.25em", marginBottom: "0px"}}>by {author}</h3> */}
             {/* <h2>{Subtext}</h2> */}

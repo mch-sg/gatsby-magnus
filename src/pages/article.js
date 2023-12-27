@@ -15,9 +15,9 @@ export default function Work({ data }) {
   
   return (
     <Layout>
-    <SEO title="Previous articles" />
+    <SEO title="Articles" />
         <div className={styles.work}>
-            <h1 className="initHeading" style={{marginBottom: "80px"}}>Previous articles</h1>
+            <h1 className="initHeading" style={{marginBottom: "80px"}}>Articles</h1>
 
             <div className={styles.postWidth}> 
             {/* 
@@ -28,7 +28,7 @@ export default function Work({ data }) {
                 <div>
                     {/* <hr style={{margin: "15px auto"}}/> */}
                       <div className={styles.workId}>
-                        <Link to={"/blog/" + work.frontmatter.slug} key={work.id}>
+                        <Link to={"/article/" + work.frontmatter.slug} key={work.id}>
                           {/* <GatsbyImage className="image" image={getImage(work.frontmatter.thumb.childImageSharp.gatsbyImageData)} alt="Banner" /> */}
                           <h3>{ work.frontmatter.title }</h3>
                         </Link>
