@@ -157,11 +157,6 @@ export const query = graphql`
           dd
           mm
           yy
-          thumb {
-            childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED)
-            }
-        }
       }
     }
   }
@@ -181,11 +176,6 @@ export const query = graphql`
         dd
         mm
         yy
-        thumb {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
-      }
     }
   }
 }
