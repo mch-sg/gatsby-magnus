@@ -14,14 +14,18 @@ export default function Success({ data }) {
   return (
     <>
     <div  className="bod">
-    <SEO title="Home" />
-    <section className={styles.header}>
+    <SEO title="Thank you" />
+    <section className={styles.header}  style={{margin: "20px", maxWidth: "600px"}}>
       <div>
-        <h1 className="initHeading">Thank you for signing up.</h1>
-        <h3 style={{marginBottom: "20px"}}>In the meantime, feel free to join my newsletter. Every week, I share my learnings from building a startup business. You will learn how to leverage your newsletter, and how to make friends by building in public.</h3>
+        <h1 className="initHeading">Thank you for signing up. Check your email to confirm your subscription.</h1>
+        <h3 style={{marginBottom: "20px"}}>In the meantime, feel free to check out my other socials. Here, I also share about my learnings from building a startup business. </h3>
 
-        {/* <MyForm /> */}
-        {/* <h3 style={{marginBottom: "20px", fontSize: "1em", color: "var(--grey)"}}>Join 140+ other entrepreneurs.</h3> */}
+        <div className="links" style={{marginTop: "30px", fontSize: "1.1em"}}>
+                <Link to="https://x.com/himagnus"  target="_blank">Twitter</Link> 
+                <Link to="https://github.com/mch-sg"  target="_blank">GitHub</Link> 
+                <Link to="https://www.linkedin.com/in/magnushvidtfeldt/"  target="_blank">LinkedIn</Link> 
+                {/* <Link to="https://youtube.com/@magnushvidtfeldt" target="_blank">YouTube</Link>  */}
+            </div>
 
       </div>
 
@@ -31,50 +35,3 @@ export default function Success({ data }) {
   )
 }
 
-
-export const query = graphql`
-  query MyQuery {
-    allMarkdownRemark(
-      sort: {frontmatter: {date: DESC}}
-      filter: {frontmatter: {status: {eq: "public"}}}
-      limit: 25
-      ) {
-      nodes {
-        frontmatter {
-          slug
-          title
-          category
-          date
-          dd
-          mm
-          yy
-      }
-    }
-  }
-
-  feature: allMarkdownRemark(
-    sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {status: {eq: "public"}}}
-    limit: 1
-    ) {
-    nodes {
-      frontmatter {
-        slug
-        title
-        category
-        date
-        dd
-        mm
-        yy
-    }
-  }
-}
-
-file(relativePath: { eq: "thumbs/e-5.png" }) {
-  childImageSharp {
-    gatsbyImageData(layout: CONSTRAINED)
-  }
-}
-
-  }
-`

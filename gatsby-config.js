@@ -15,19 +15,14 @@ module.exports = {
     'gatsby-plugin-image',
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // The unique name for each instance
-        name: `work`,
-        // Path to the directory
-        path: `${__dirname}/src/work/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
+        trackingIds: [
+          "G-JH0TZ6Y6X4" // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {
