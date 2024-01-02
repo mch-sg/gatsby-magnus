@@ -2,7 +2,7 @@
 title: "How to integrate ESG data"
 slug: esg-integration
 category: "Coding"
-status: "public"
+status: "draft"
 
 date: "2022-05-19"
 dd: "19"

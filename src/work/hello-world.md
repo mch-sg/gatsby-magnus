@@ -1,5 +1,6 @@
 ---
 title: "Initialization"
+desc: "A few months ago, I started organizing my writing and taking notes using the zettelkasten (German: 'slip box') method. Sociologist Johannes F.K. Schmidt once said the process makes serendipity possible in a systemically and theoretically informed way. My experience with the process reflected this."
 slug: init
 category: "Coding"
 status: "public"

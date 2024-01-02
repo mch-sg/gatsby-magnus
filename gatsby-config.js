@@ -45,9 +45,9 @@ module.exports = {
   
   siteMetadata: {
     title: "Magnus Hvidtfeldt",
-    description: "Some random description",
+    description: "Solopreneur by day, twin by birth. Building 6 startups in 6 months. Sharing what I learn from building in public, and how to stay consistent.",
     copyright: 'Copyright 2024 Magnus Hvidtfeldt',
-    author: 'Magnus Chr. Hvidtfeldt',
-    contact: 'magnus.hvidtfeldt@gmail.com'
+    author: 'Magnus Hvidtfeldt',
+    contact: 'hi@magnus.so'
   }
 }

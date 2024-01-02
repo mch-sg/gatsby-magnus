@@ -12,7 +12,7 @@ export default function Join({ data }) {
   return (
     <Layout>
       <SEO title="Join my newsletter" />
-      <section className={styles.header} style={{maxWidth: "550px"}}>
+      <section className={styles.header} style={{maxWidth: "700px"}}>
         <div>
           <h1 className="initHeading">Subscribe to my newsletter!</h1>
           <h3 style={{marginBottom: "20px"}}>Every week, I share my learnings from building a startup business. You will learn how to leverage your newsletter, and how to make friends by building in public.</h3>

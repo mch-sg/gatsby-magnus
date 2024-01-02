@@ -7,11 +7,25 @@
   --link: #cfcfcf;
   --tertiary: #bb94c8; /* #adacc4 - #b392ac - #645d55 */
   --tertiaryHvr: #a17bad; /* #85859f - #96768f - #4d463f */
+
+  --tagClr: #be94c8; /* #adacc4 - #b392ac - #645d55 - #bb94c8 */
+  --tagBg: #1f1a22; /* #85859f - #96768f - #4d463f - #221a22*/
+  --tagHvr: #e7bff0;
+  --tagBgHvr: #2b252e;
   --grey: #444444;
   --res: #1a1a1a;
   --background: #141414;
-  --maxW: 650px;
+  --maxW: 700px;
   --border: 7.5px;
+}
+:rootwhite {
+  --primary: #121212;
+  --secondary: #a8a8a8;
+  --secondarygrey: #808080;
+  --link: #cfcfcf;
+  --grey: #adadad;
+  --res: #f1f0f0;
+  --background: #f6f6f6;
 }
 
 * {
@@ -57,13 +71,13 @@ p {
 }
 
 .layout {
-  max-width: 1500px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
 nav {
   margin: 0px 10px;
-  padding: 10px 25px;
+  padding: 0px 25px;
   border-radius: var(--border);
   /* background: var(--res); */
   display: grid;
@@ -82,10 +96,10 @@ nav .links {
 
 nav a,
 nav h1 {
-  font-size: 1em;
+  font-size: 1.1em;
   display: inline-block;
   margin-left: 0px;
-  font-weight: 400;
+  font-weight: 500;
   padding-bottom: 8px;
   border-bottom: 1px solid transparent;
   transition: 0.1s;
@@ -95,6 +109,10 @@ nav h1 {
   border-radius: var(--border);
 }
 
+.nav-left {
+  font-weight: 500;
+}
+
 h1 {
   font-size: 2em;
 }
@@ -102,6 +120,13 @@ nav a:hover {
   /* border-color: white; */
   /* background: #292929; */
   color: var(--secondarygrey);
+}
+
+nav .img:hover {
+  transition: 0.1s;
+  /* border-color: white; */
+  /* background: #292929; */
+  opacity: 0.75;
 }
 
 .active {
@@ -117,7 +142,7 @@ footer {
   grid-template-columns: 1.75fr 0.35fr 0.4fr 0.2fr;
   /* margin-top: 80px;
   margin-bottom: 80px; */
-  margin: 80px 10px 30px 10px;
+  margin: 80px 20px 20px 20px;
 }
 
 footer .links {
@@ -136,7 +161,7 @@ footer p {
 
 @media only screen and (max-width: 1224px) {
   footer {
-    margin: 80px 10px 10px 10px;
+    margin: 80px 20px 20px 20px;
   }
 }
 
@@ -150,7 +175,7 @@ footer p {
     grid-template-columns: 1fr;
     /* margin-top: 80px;
     margin-bottom: 80px; */
-    margin: 80px 10px 10px 10px;
+    margin: 80px 20px 20px 20px;
   }
 
   footer .links {
@@ -235,7 +260,7 @@ ol {
 }
 
 .initHeading {
-  margin-top: 80px;
+  margin-top: 100px;
   margin-bottom: 10px;
 }
 
@@ -294,7 +319,7 @@ SCROLLBAR STYLING
   padding: 10px 16px;
   border-radius: 5px;
   margin-top: 20px;
-  font-weight: 400;
+  font-weight: 500;
   transition: 0.1s;
 }
 
@@ -326,4 +351,18 @@ SCROLLBAR STYLING
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.Tag {
+  font-size: 1em;
+  margin-left: 10px;
+  padding: 5px 17.5px;
+  border-radius: 100px;
+  background: var(--tagBg);
+  color: var(--tagClr);
+}
+
+.Tag:hover {
+  background: var(--tagBgHvr);
+  color: var(--tagHvr);
 }

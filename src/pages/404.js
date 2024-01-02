@@ -1,15 +1,19 @@
 import React from 'react'
-import Layout from "../components/Layout"
-import * as styles from "../styles/home.module.css"
-import { Link } from 'gatsby'
+import Layout from '../components/Layout'
+import * as styles from "../styles/work.module.css"
+import SEO from "../components/Seo"
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import GIF from '../images/404.gif'
+
 
 export default function NotFound() {
   return (
     <Layout>
-        <div className="FOFContainer">
-          <h1 style={{textAlign: "center"}}>404!</h1>
-          {/* <Link style={{textAlign: "center", alignItems: "center"}} className={styles.btn} to="/">Go back</Link> */}
+        <SEO title="NotFound" />
+        <div className={styles.work}>
+            <h1 className="initHeading" style={{marginBottom: "80px"}}>404, I didn't find that one.</h1>
         </div>
     </Layout>
   )
 }
+

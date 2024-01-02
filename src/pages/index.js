@@ -20,12 +20,12 @@ export default function Home({ data }) {
     <SEO title="Home" />
     <section className={styles.header}>
       <div>
-        <h1 className="initHeading">Magnus Hvidtfeldt</h1>
-        <h3 style={{marginBottom: "20px"}}>I'm a software engineer and entrepreneur.</h3>
-        {/* <Link className={styles.btn} to="/work">My work</Link> */}
+        <h1 className="initHeading">Magnus Chr. Hvidtfeldt</h1>
+        <h3 style={{marginBottom: "20px"}}>I'm an aspiring software engineer and entrepreneur. Every week, I share my learnings from building startup businesses. You will learn how to set guiding principles, and how to make friends by building in public.</h3>
 
-        {/* <h3 style={{marginTop: "15px"}}>Join my newsletter!</h3> */}
         <FormGrid />
+        <h3 style={{marginBottom: "20px", fontSize: "1em", color: "var(--grey)"}}>Join 140+ other solopreneurs.</h3>
+
       </div>
 
       {/* <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
@@ -49,11 +49,10 @@ export default function Home({ data }) {
                     </Link>
                     <p className={styles1.Cat}>{ feature.frontmatter.category }</p>
 
-                    <p style={{textTransform: ""}} className={styles1.date}>{ format('{0} {1} {2}', feature.frontmatter.dd, feature.frontmatter.mm, feature.frontmatter.yy) }</p>
+                    <p style={{textTransform: ""}} className={styles1.date}>{ format('{1} {0}, {2}', feature.frontmatter.dd, feature.frontmatter.mm, feature.frontmatter.yy) }</p>
                   </div>
-                  <GatsbyImage className="image" image={data.file.childImageSharp.gatsbyImageData} alt="banner"/>
-
-
+                    <p style={{textAlign: "left"}} className={styles1.date}>{ feature.frontmatter.desc }</p>
+                  {/* <GatsbyImage className="image" image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
 
                 </div>
             ))}
@@ -62,6 +61,7 @@ export default function Home({ data }) {
 
       </div>
     </section>
+
 
     <section>
     <div className={styles1.work}>
@@ -76,7 +76,6 @@ export default function Home({ data }) {
                   {/* <hr style={{margin: "15px auto"}}/> */}
                   <div className={styles1.workId}>
                     <Link to={"/article/" + work.frontmatter.slug} key={work.id}>
-                      {/* <GatsbyImage className="image" image={getImage(work.frontmatter.thumb.childImageSharp.gatsbyImageData)} alt="Banner" /> */}
                       <h3>{ work.frontmatter.title }</h3>
                     </Link>
                     <p className={styles1.Cat}>{ work.frontmatter.category }</p>
@@ -91,6 +90,52 @@ export default function Home({ data }) {
 
       </div>
     </section>
+
+
+    <section>
+    <div className={styles1.work}>
+
+          <div className={styles1.postWidth}> 
+          <div className="initHeading m-title" style={{marginBottom: "30px", textAlign: "left"}}>Selected work</div>
+
+
+
+          {/* <div>
+              <div className="featured" style={{marginBottom: "5px"}}>
+                  <div className={styles1.workId}>
+                  <div style={{opacity: "0.25"}} >
+                      <h3>Letdir</h3>
+                      <p style={{textAlign: "left"}} >A newsletter directory</p>
+                    </div>
+                    <p className={styles1.Cat} style={{margin: "auto 0px"}} ></p>
+                    <p className={styles1.Cat} style={{margin: "auto 0px"}} >Startup</p>
+                  </div>
+                </div>
+            </div> */}
+
+
+          <div>
+              <div className="featured" style={{marginBottom: "5px"}}>
+                  {/* <hr style={{margin: "15px auto"}}/> */}
+                  <div className={styles1.workId}>
+                  <div> {/* Link to={"/work/unicopy"} */}
+                      <h3>Unicopy</h3>
+                      <p style={{textAlign: "left"}} >Copy unicode characters</p>
+                    </div>
+                    <p className={styles1.Cat} style={{margin: "auto 0px"}} >Startup</p>
+                    <p className={styles1.date} style={{margin: "auto 0px"}} >Jan 2022</p>
+
+                  </div>
+                </div>
+            </div>
+
+
+
+          </div>
+      </div>
+    </section>
+
+
   </Layout>
   )
 }
@@ -130,6 +175,7 @@ export const query = graphql`
       frontmatter {
         slug
         title
+        desc
         category
         date
         dd

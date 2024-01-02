@@ -2,7 +2,7 @@
 title: "How I built the live video feed on this website"
 slug: the-drum-stop
 category: "Startup"
-status: "public"
+status: "draft"
 
 date: "2011-12-19"
 dd: "20"
