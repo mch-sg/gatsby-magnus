@@ -75,6 +75,10 @@ p {
   margin: 0 auto;
 }
 
+.links a {
+  margin: 0 10px 0 0;
+}
+
 nav {
   margin: 0px 10px;
   padding: 0px 25px;
@@ -190,6 +194,10 @@ footer p {
     display: grid;
     grid-template-columns: 0.15fr 1.85fr;
     /* margin-top: 10px; */
+  }
+
+  .links a {
+    margin: 0 0px 0 0;
   }
 }
 
@@ -390,8 +398,4 @@ SCROLLBAR STYLING
   align-items: center;
   justify-content: center;
   height: 80vh;
-}
-
-.links a {
-  margin: 0px 20px 0px 0px;
 }
