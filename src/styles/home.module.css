@@ -112,3 +112,17 @@ input:-webkit-autofill:placeholder {
   grid-gap: 15px;
   /* margin-top: 10px; */
 }
+
+@media only screen and (max-width: 824px) {
+  .formGrid {
+    margin: 0 auto;
+    max-width: var(--maxW);
+    padding: 15px 0px;
+    border-radius: var(--border);
+    /* background: var(--res); */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    /* margin-top: 10px; */
+  }
+}
