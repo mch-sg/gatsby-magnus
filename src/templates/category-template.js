@@ -58,11 +58,6 @@ query Cat($category: String) {
         dd
         mm
         yy
-        thumb {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
-      }
     }
   }
 }
@@ -73,11 +68,7 @@ markdownRemark(frontmatter: {category: {eq: $category}}) {
     title
     date
     category
-    featuredImg {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
-      }
-    }
+
   }
 }
 }

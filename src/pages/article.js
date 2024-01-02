@@ -64,11 +64,7 @@ query WorkPage {
         dd
         mm
         yy
-        thumb {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
-      }
+
     }
   }
 }

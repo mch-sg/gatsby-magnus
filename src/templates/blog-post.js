@@ -47,11 +47,7 @@ query BlogPost($slug: String) {
         mm
         yy
         category
-        featuredImg {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
-        }
+
       }
     }
     site {
