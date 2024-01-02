@@ -10,23 +10,181 @@ import * as styles1 from "../styles/work.module.css"
 import { format } from 'react-string-format';
 
 export default function Home({ data }) {
+  
+  const works = data.allMarkdownRemark.nodes;
+  const features = data.feature.nodes;
+  // const image = getImage(features.childImageSharp.gatsbyImageData)
 
   return (
-    <>
-    <div  className="bod">
+  <Layout>
     <SEO title="Home" />
-    <section className={styles.header} style={{margin: "20px", maxWidth: "600px"}}>
+    <section className={styles.header}>
       <div>
-        <h1 className="initHeading">Coming soon.</h1>
-        <h3 style={{marginBottom: "20px"}}>In the meantime, feel free to join my newsletter. Every week, I share my learnings from building a startup business. You will learn how to leverage your newsletter, and how to make friends by building in public.</h3>
+        <h1 className="initHeading">Magnus Chr. Hvidtfeldt</h1>
+        <h3 style={{marginBottom: "20px"}}>I'm an aspiring software engineer and entrepreneur. Every week, I share my learnings from building startup businesses. You will learn how to set guiding principles, and how to make friends by building in public.</h3>
 
-        <MyForm />
-        <h3 style={{marginBottom: "20px", fontSize: "1em", color: "var(--grey)"}}>Join 140+ other entrepreneurs.</h3>
+        <FormGrid />
+        <h3 style={{marginBottom: "20px", fontSize: "1em", color: "var(--grey)"}}>Join 140+ other solopreneurs.</h3>
+
       </div>
 
+      {/* <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
+
     </section>
-    </div>
-    </>
+
+    <section>
+    <div className={styles1.work}>
+
+          <div className={styles1.postWidth}> 
+          <div className="initHeading m-title" style={{marginBottom: "20px", textAlign: "left"}}>Latest article</div>
+
+          <div>
+
+            {features.map(feature => (
+
+              <div className="featured">
+                  <div className={styles1.workId}>
+                    <Link to={"/article/" + feature.frontmatter.slug} key={feature.id}>
+                      <h3>{ feature.frontmatter.title }</h3>
+                    </Link>
+                    <p className={styles1.Cat}>{ feature.frontmatter.category }</p>
+
+                    <p style={{textTransform: ""}} className={styles1.date}>{ format('{1} {0}, {2}', feature.frontmatter.dd, feature.frontmatter.mm, feature.frontmatter.yy) }</p>
+                  </div>
+                    <p style={{textAlign: "left"}} className={styles1.date}>{ feature.frontmatter.desc }</p>
+                  {/* <GatsbyImage className="image" image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
+
+                </div>
+            ))}
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+
+    <section>
+    <div className={styles1.work}>
+
+          <div className={styles1.postWidth}> 
+          <div className="initHeading m-title" style={{marginBottom: "30px", textAlign: "left"}}>All articles</div>
+
+
+          <div>
+            {works.map(work => (
+              <div>
+                  {/* <hr style={{margin: "15px auto"}}/> */}
+                  <div className={styles1.workId}>
+                    <Link to={"/article/" + work.frontmatter.slug} key={work.id}>
+                      <h3>{ work.frontmatter.title }</h3>
+                    </Link>
+                    <p className={styles1.Cat}>{ work.frontmatter.category }</p>
+
+                    <p style={{textTransform: ""}} className={styles1.date}>{ format('{1} {2}', work.frontmatter.dd, work.frontmatter.mm, work.frontmatter.yy) }</p>
+                  </div>
+                  <hr style={{margin: "10px auto"}}/>
+                </div>
+            ))}
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+
+    <section>
+    <div className={styles1.work}>
+
+          <div className={styles1.postWidth}> 
+          <div className="initHeading m-title" style={{marginBottom: "20px", textAlign: "left"}}>Selected work</div>
+
+
+
+          {/* <div>
+              <div className="featured" style={{marginBottom: "5px"}}>
+                  <div className={styles1.workId}>
+                  <div style={{opacity: "0.25"}} >
+                      <h3>Letdir</h3>
+                      <p style={{textAlign: "left"}} >A newsletter directory</p>
+                    </div>
+                    <p className={styles1.Cat} style={{margin: "auto 0px"}} ></p>
+                    <p className={styles1.Cat} style={{margin: "auto 0px"}} >Startup</p>
+                  </div>
+                </div>
+            </div> */}
+
+
+          <div>
+              <div className="featured" style={{marginBottom: "5px"}}>
+                  {/* <hr style={{margin: "15px auto"}}/> */}
+                  <div className={styles1.workId}>
+                  <div> {/* Link to={"/work/unicopy"} */}
+                      <h3>Unicopy</h3>
+                      <p style={{textAlign: "left"}} >Copy unicode characters</p>
+                    </div>
+                    <p className={styles1.Cat} style={{margin: "auto 0px"}} >Startup</p>
+                    <p className={styles1.date} style={{margin: "auto 0px"}} >Jan 2022</p>
+
+                  </div>
+                </div>
+            </div>
+
+
+
+          </div>
+      </div>
+    </section>
+
+
+  </Layout>
   )
 }
 
+
+export const query = graphql`
+  query MyQuery {
+    allMarkdownRemark(
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {status: {eq: "public"}}}
+      limit: 25
+      ) {
+      nodes {
+        frontmatter {
+          slug
+          title
+          category
+          date
+          dd
+          mm
+          yy
+      }
+    }
+  }
+
+  feature: allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {status: {eq: "public"}}}
+    limit: 1
+    ) {
+    nodes {
+      frontmatter {
+        slug
+        title
+        desc
+        category
+        date
+        dd
+        mm
+        yy
+    }
+  }
+}
+
+file(relativePath: { eq: "thumbs/e-5.png" }) {
+  childImageSharp {
+    gatsbyImageData(layout: CONSTRAINED)
+  }
+}
+
+  }
+`

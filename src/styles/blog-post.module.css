@@ -29,7 +29,8 @@
   margin-bottom: 5px;
 }
 .html {
-  margin-top: 40px;
+  margin-top: 50px;
+  font-size: 1.1em;
 }
 .featured {
   margin-bottom: 40px;
@@ -43,7 +44,8 @@
 
 .html p {
   margin: 16px auto;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+  /* margin-top: 10px; */
 }
 
 li {
