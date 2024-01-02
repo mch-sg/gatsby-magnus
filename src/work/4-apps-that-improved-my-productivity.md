@@ -3,7 +3,7 @@ title: "4 Apps That Improved My Productivity in 2023"
 desc: "Looking back at 2023, these are the apps that saved me time and blocked away my day to day distractions. Please note that this email contains affiliated links, which do not incur any additional cost for you."
 slug: 4-apps-that-tmproved-my-productivity-in-2023
 category: "Productivity"
-status: "public"
+status: "draft"
 
 date: "2024-01-02"
 dd: "2"

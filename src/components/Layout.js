@@ -39,6 +39,7 @@ export default function Layout({ children }) {
                 <Link to="https://www.linkedin.com/in/magnushvidtfeldt/"  target="_blank">LinkedIn</Link> <br/>
                 <Link to="https://www.producthunt.com/@himagnus" target="_blank">ProductHunt</Link> <br/>
             </div>
+  
         </footer>
     </div>
   )

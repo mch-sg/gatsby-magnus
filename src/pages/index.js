@@ -96,7 +96,7 @@ export default function Home({ data }) {
     <div className={styles1.work}>
 
           <div className={styles1.postWidth}> 
-          <div className="initHeading m-title" style={{marginBottom: "30px", textAlign: "left"}}>Selected work</div>
+          <div className="initHeading m-title" style={{marginBottom: "20px", textAlign: "left"}}>Selected work</div>
 
 
 
