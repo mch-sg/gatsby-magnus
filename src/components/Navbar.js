@@ -16,7 +16,7 @@ export default function Navbar() {
       }
     
 
-      file(relativePath: { eq: "headClr.png" }) {
+      file(relativePath: { eq: "head.png" }) {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED)
         }

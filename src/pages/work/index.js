@@ -21,18 +21,18 @@ export default function WorkProjects({ data }) {
             <h1 className="initHeading" style={{marginBottom: "80px"}}>Work</h1>
 
 
-          <div>
+          {/* <div>
               <div className="featured" style={{marginBottom: "5px"}}>
                   <div className={styles1.workId}>
-                  <div style={{opacity: "0.25"}} >
+                  <Link to="/work/letdir">
                       <h3>Letdir</h3>
                       <p style={{textAlign: "left"}} >A newsletter directory</p>
-                    </div>
-                    <p className={styles1.Cat} style={{margin: "auto 0px"}} ></p>
+                    </Link>
                     <p className={styles1.Cat} style={{margin: "auto 0px"}} >Startup</p>
+                    <p className={styles1.date} style={{margin: "auto 0px"}} >Jan 2024</p>
                   </div>
                 </div>
-            </div>
+            </div> */}
 
 
           <div>

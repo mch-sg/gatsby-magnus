@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
+import FormGrid from "../components/FormGrid"
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "../styles/blog-post.module.css"
 import { graphql } from 'gatsby'
@@ -31,6 +32,13 @@ export default function BlogPost({ data }) {
           </div>
 
           <div style={{marginBottom: "80px"}} className={styles.html} dangerouslySetInnerHTML={{ __html: html }} />
+
+          {/* <hr />
+        <h1 className="initHeading">Join my newsletter</h1>
+        <h3 style={{color: "var(--secondary)", marginBottom: "20px", fontSize: "1em", fontWeight: "400"}}>Every week, I share my learnings from building startup businesses. You will learn how to set guiding principles, and how to make friends by building in public.</h3>
+
+        <FormGrid />
+        <h3 style={{marginBottom: "20px", fontSize: "1em", color: "var(--grey)"}}>Join 140+ other solopreneurs.</h3> */}
         </div>
     </Layout>
   )

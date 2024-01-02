@@ -26,14 +26,19 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        trackingIds: [
-          "G-JH0TZ6Y6X4" // Google Analytics / GA
-        ],
-        pluginConfig: {
-          head: true,
-        },
+        // The unique name for each instance
+        name: `work`,
+        // Path to the directory
+        path: `${__dirname}/src/work/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
   ],
