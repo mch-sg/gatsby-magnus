@@ -9,6 +9,9 @@ date: "2024-01-02"
 dd: "2"
 mm: "Jan"
 yy: "2024"
+
+thumb: ""
+featuredImg: ""
 ---
 
 Welcome to my new website! I'm glad to have you here.
