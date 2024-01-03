@@ -16,7 +16,7 @@ featuredImg: ../images/featured/coffee-banner.png
 
 At once, I am ready for the new year.
 
-The past year has been filled with different emotions, from graduating high school at the top of my class, to my parents unexpected divorce. It was a year in alignment with what I set out to do: graduate, read at least 20 books, get a job, and becoming more intentional with my actions.
+The past year has been filled with different emotions, from graduating high school at the top of my class, to my parents' unexpected divorce. It was a year in alignment with what I set out to do: graduate, read at least 20 books, get a job, and becoming more intentional with my actions.
 
 Learning was my primary motivator, having come to realize the pursuit of wisdom is the noblest of all. With this in mind, I read 29 books, and got a job which taught me a lot about the driving factors of the business world.
 
