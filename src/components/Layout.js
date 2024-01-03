@@ -16,7 +16,7 @@ export default function Layout({ children }) {
         <footer>
             {/* <p>2024 © Magnus Hvidtfeldt</p> */}
             <p>© 2021-2024 Magnus Hvidtfeldt. All Rights Reserved. <br />
-              www.magnus.so v.2024.01 - Just testing here</p>
+              www.magnus.so v.2024.01</p>
             {/* <p></p>
             <p></p> */}
 
