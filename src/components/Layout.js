@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Link, useStaticQuery } from 'gatsby'
 import Navbar from './Navbar'
 import '../styles/global.css'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Layout({ children }) {
 
@@ -41,6 +42,7 @@ export default function Layout({ children }) {
             </div>
   
         </footer>
+        <Analytics />
     </div>
   )
 }
