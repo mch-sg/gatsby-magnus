@@ -73,7 +73,7 @@ p {
   font-size: 1em;
   font-weight: 400;
   /* margin-bottom: 35px; */
-  color: var(--secondary);
+  color: var(--secondarygrey);
 }
 
 .layout {
@@ -188,6 +188,9 @@ footer p {
 }
 
 @media only screen and (max-width: 824px) {
+  h1 {
+    font-size: 1.75em;
+  }
   footer {
     padding: 25px;
     border-radius: var(--border);
