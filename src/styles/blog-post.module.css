@@ -54,14 +54,14 @@ li {
 
 .html a {
   transition: 0.1s;
-  text-decoration-color: var(--grey);
+  text-decoration-color: var(--btnClr);
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 2px;
   background-position: 0 100%;
   background-size: 100% 3px;
 
-  color: var(--link);
+  color: var(--secondarygrey);
 }
 
 .html a:hover {
