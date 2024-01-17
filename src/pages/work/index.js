@@ -21,10 +21,10 @@ export default function WorkProjects({ data }) {
             <h1 className="initHeading" style={{marginBottom: "80px"}}>Work</h1>
 
 
-          {/* <div>
-              <div className="featured" style={{marginBottom: "5px"}}>
+          <div>
+              <div className="featured" style={{marginBottom: "10px"}}>
                   <div className={styles1.workId}>
-                  <Link to="/work/letdir">
+                  <Link to="https://letdir.com" target="_blank">
                       <h3>Letdir</h3>
                       <p style={{textAlign: "left"}} >A newsletter directory</p>
                     </Link>
@@ -32,11 +32,11 @@ export default function WorkProjects({ data }) {
                     <p className={styles1.date} style={{margin: "auto 0px"}} >Jan 2024</p>
                   </div>
                 </div>
-            </div> */}
+            </div>
 
 
           <div>
-              <div className="featured" style={{marginBottom: "5px"}}>
+              <div className="featured" style={{marginBottom: "10px"}}>
                   {/* <hr style={{margin: "15px auto"}}/> */}
                   <div className={styles1.workId}>
                   <div> {/* Link to={"/work/unicopy"} */}

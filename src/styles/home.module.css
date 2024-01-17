@@ -27,20 +27,20 @@
 .btn {
   font-size: 1em;
   display: inline-block;
-  color: var(--background);
-  background: var(--secondarygrey);
+  color: var(--primary);
+  background: var(--tertiary);
   padding: 15px;
   border-radius: 5px;
   /* margin-top: 20px; */
-  font-weight: 500;
+  font-weight: 400;
   transition: 0.1s;
   border: none;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--secondary);
-  color: var(--background);
+  background: var(--btnClr);
+  /* color: var(--background); */
 }
 
 .inputForm {
@@ -56,13 +56,13 @@
 
 ::placeholder {
   color: var(--secondary);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 input {
   transition: 0.1s !important;
   /* outline: none !important; */
-  outline: 0.1ch solid rgb(42, 42, 42);
+  outline: 0.1ch solid var(--link);
 }
 
 input:focus {

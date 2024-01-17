@@ -1,20 +1,21 @@
 @import url("https://fonts.cdnfonts.com/css/satoshi");
 
 :root {
-  --primary: #f3f3f3;
-  --secondary: #7b7b7b;
-  --secondarygrey: #b8b8b8;
-  --link: #cfcfcf;
-  --tertiary: #bb94c8; /* #adacc4 - #b392ac - #645d55 */
+  --primary: #111111;
+  --secondary: #8d8d8d;
+  --secondarygrey: #505050;
+  --link: #e9e9e9;
+  --tertiary: #d3eed9; /* #adacc4 - #b392ac - #645d55 */
   --tertiaryHvr: #a17bad; /* #85859f - #96768f - #4d463f */
 
-  --tagClr: #be94c8; /* #adacc4 - #b392ac - #645d55 - #bb94c8 */
-  --tagBg: #1f1a22; /* #85859f - #96768f - #4d463f - #221a22*/
-  --tagHvr: #e7bff0;
-  --tagBgHvr: #2b252e;
+  --tagClr: #14341b; /* #adacc4 - #b392ac - #645d55 - #bb94c8 */
+  --tagBg: #d3eed9; /* #85859f - #96768f - #4d463f - #221a22*/
+  --tagHvr: #14341b;
+  --tagBgHvr: #eafaee;
+  --btnClr: #c1e7ca;
   --grey: #444444;
-  --res: #1a1a1a;
-  --background: #141414;
+  --res: #fafafa; /* #fafafa */
+  --background: #ffffff;
   --maxW: 700px;
   --border: 7.5px;
 }
@@ -72,7 +73,7 @@ p {
   font-size: 1em;
   font-weight: 400;
   /* margin-bottom: 35px; */
-  color: var(--secondarygrey);
+  color: var(--secondary);
 }
 
 .layout {
@@ -108,7 +109,7 @@ nav h1 {
   font-size: 1.1em;
   display: inline-block;
   margin-left: 0px;
-  font-weight: 500;
+  font-weight: 400;
   padding-bottom: 8px;
   border-bottom: 1px solid transparent;
   transition: 0.1s;
@@ -131,11 +132,15 @@ nav a:hover {
   color: var(--secondarygrey);
 }
 
+nav .img {
+  transition: 0.1s;
+  opacity: 0.5;
+}
 nav .img:hover {
   transition: 0.1s;
   /* border-color: white; */
   /* background: #292929; */
-  opacity: 0.75;
+  opacity: 0.25;
 }
 
 .active {
@@ -218,14 +223,14 @@ footer p {
 }
 
 ::selection {
-  color: var(--background);
+  color: var(--primary);
   background: var(--tertiary);
 }
 
 hr {
   border: 0;
   height: 0.01ch;
-  background: var(--grey);
+  background: var(--link);
   opacity: 0.5;
   margin: 20px auto;
   width: 100%;
@@ -240,11 +245,7 @@ blockquote {
     rgba(178, 131, 190, 1) 10%,
     rgba(22, 92, 165, 1) 100%
   ); */
-  border-image: linear-gradient(
-    5deg,
-    var(--tertiary) 10%,
-    var(--tertiary) 100%
-  );
+  border-image: linear-gradient(5deg, var(--btnClr) 10%, var(--btnClr) 100%);
   border-image-slice: 1;
   padding: 1em;
   margin: 0;
@@ -258,6 +259,11 @@ pre {
   font-family: mono;
   border-radius: 5px;
   padding: 1em;
+}
+
+strong {
+  font-weight: 500;
+  background: var(--tertiary);
 }
 
 .m-title {
@@ -343,12 +349,13 @@ SCROLLBAR STYLING
 
 .featured {
   /* margin: 20px auto; */
-  padding: 20px;
+  padding: 25px;
   border-radius: var(--border);
   background: var(--res);
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
+  outline: 0.1ch solid var(--link);
 }
 
 .image {
@@ -367,7 +374,7 @@ SCROLLBAR STYLING
 }
 
 .Tag {
-  font-size: 1em;
+  font-size: 0.85em;
   margin-left: 10px;
   padding: 5px 17.5px;
   border-radius: 100px;
@@ -382,7 +389,7 @@ SCROLLBAR STYLING
 
 .featured {
   /* margin: 20px auto; */
-  padding: 20px;
+  padding: 25px;
   border-radius: var(--border);
   background: var(--res);
   display: grid;
