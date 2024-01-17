@@ -2,7 +2,9 @@
 title: "Birthday reflections"
 desc: "Yesterday was my 19th birthday. I thought it would be a good time for some reflections on life and death in this honor. Meditating on the idea of death is perhaps the most important thing we can do throughout our life. It will keep us in line, and make sure to keep our focus on the things that matter to us"
 slug: birthday-reflections
+slugNew: birthday-reflections
 category: "Philosophy"
+letter: "0"
 status: "public"
 
 date: "2023-02-20"

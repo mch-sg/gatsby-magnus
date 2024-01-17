@@ -13,6 +13,7 @@ export default function Home({ data }) {
   
   const works = data.allMarkdownRemark.nodes;
   const features = data.feature.nodes;
+  const newsletters = data.newsletters.nodes;
   // const image = getImage(features.childImageSharp.gatsbyImageData)
 
   return (
@@ -20,7 +21,7 @@ export default function Home({ data }) {
     <SEO title="Home" />
     <section className={styles.header}>
       <div>
-        <h1 className="initHeading">Magnus Chr. Hvidtfeldt</h1>
+        <h1 className="initHeading">Magnus Chr. Hvidtfeldt 🦚</h1>
         <h3 style={{marginBottom: "20px"}}>I'm an aspiring software engineer and entrepreneur. Every week, I share my learnings from building startup businesses. You will learn how to set guiding principles, and how to make friends by building in public.</h3>
 
         <FormGrid />
@@ -36,7 +37,7 @@ export default function Home({ data }) {
     <div className={styles1.work} >
 
           <div className={styles1.postWidth}> 
-          <div className="initHeading m-title" style={{marginBottom: "20px", textAlign: "left"}}>Latest article</div>
+          <div className="initHeading m-title" style={{marginBottom: "20px", textAlign: "left"}}>Latest piece</div>
 
           <div>
 
@@ -136,6 +137,36 @@ export default function Home({ data }) {
     </section>
 
 
+
+    <section>
+    <div className={styles1.work}>
+
+          <div className={styles1.postWidth}> 
+          <div className="initHeading m-title" style={{marginBottom: "30px", textAlign: "left"}}>All newsletter issues</div>
+
+
+          <div>
+            {newsletters.map(letter => (
+              <div>
+                  {/* <hr style={{margin: "15px auto"}}/> */}
+                  <div className={styles1.workId}>
+                    <Link to={"/article/" + letter.frontmatter.slug} key={letter.id}>
+                      <h3>{ letter.frontmatter.title }</h3>
+                    </Link>
+                    <p className={styles1.Cat}>{ letter.frontmatter.category }</p>
+
+                    <p style={{textTransform: ""}} className={styles1.date}>{ format('{1} {2}', letter.frontmatter.dd, letter.frontmatter.mm, letter.frontmatter.yy) }</p>
+                  </div>
+                  <hr style={{margin: "10px auto"}}/>
+                </div>
+            ))}
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+
   </Layout>
   )
 }
@@ -145,7 +176,25 @@ export const query = graphql`
   query MyQuery {
     allMarkdownRemark(
       sort: {frontmatter: {date: DESC}}
-      filter: {frontmatter: {status: {eq: "public"}}}
+      filter: {frontmatter: {status: {eq: "public"}, category: {ne: "Newsletter"}}}
+      limit: 25
+      ) {
+      nodes {
+        frontmatter {
+          slug
+          title
+          category
+          date
+          dd
+          mm
+          yy
+      }
+    }
+  }
+
+    newsletters: allMarkdownRemark(
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {status: {eq: "public"}, category: {eq: "Newsletter"}}}
       limit: 25
       ) {
       nodes {
