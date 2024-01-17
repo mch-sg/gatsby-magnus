@@ -39,7 +39,7 @@ export default function Navbar() {
             <Link to="/">Home</Link> 
             <Link to="/article">Articles</Link> 
             <Link to="/work">Work</Link> 
-            <Link to="/join">Newsletter</Link> 
+            <Link to="/newsletter">Newsletter</Link> 
         </div>
     </nav>
   )

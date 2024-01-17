@@ -3,6 +3,7 @@ title: "Absurdity of Life"
 desc: "Why do we not all commit suicide? That seems to be the question at hand for many, and certainly for Albert Camus, a philosopher from french literature with the notion of the absurdity of life apparent in much of his life's work."
 slug: absurdity-of-life
 category: "Philosophy"
+letter: "0"
 status: "draft"
 
 date: "2023-03-07"

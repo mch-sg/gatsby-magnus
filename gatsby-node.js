@@ -1,41 +1,147 @@
+const path = require('path');
+
 exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
-    const workTemplate = require.resolve(`./src/templates/blog-post.js`)
-    const res = await graphql(`
-        query BlogFindSlug {
-        allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
-            nodes {
-            frontmatter {
-                slug
-            }
-            }
+  const { createPage } = actions;
+
+  // Blog post template
+  const blogPostTemplate = path.resolve('./src/templates/blog-post.js');
+
+  // Category template
+  const categoryTemplate = path.resolve('./src/templates/category-template.js');
+
+  // Newsletter post template
+  const newsletterPostTemplate = path.resolve('./src/templates/newsletter-post.js');
+
+  // Combined GraphQL query
+  const result = await graphql(`
+    query AllPages {
+      blogPosts: allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { frontmatter: { status: { eq: "public" } } }
+      ) {
+        nodes {
+          frontmatter {
+            slug
+          }
         }
+      }
+
+      categories: allMarkdownRemark {
+        nodes {
+          frontmatter {
+            category
+          }
         }
-    `)
-    res.data.allMarkdownRemark.nodes.forEach((node) => {
-        createPage({
-        path: `/article/${node.frontmatter.slug}`,
-        component: workTemplate,
-        context: { slug: node.frontmatter.slug },
-        })
-    })
-    const catTemplate = require.resolve(`./src/templates/category-template.js`)
-    const resa = await graphql(`
-        query BlogFindCat {
-        allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
-            nodes {
-            frontmatter {
-                category
-            }
-            }
+      }
+
+      newsletters: allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { frontmatter: { category: { eq: "Newsletter" } } }
+      ) {
+        nodes {
+          frontmatter {
+            slugNew
+          }
         }
-        }
-    `)
-    resa.data.allMarkdownRemark.nodes.forEach((node) => {
-        createPage({
-        path: `/category/${node.frontmatter.category}`,
-        component: catTemplate,
-        context: { category: node.frontmatter.category },
-        })
-    })
-}
+      }
+    }
+  `);
+
+  // Create pages for blog posts
+  result.data.blogPosts.nodes.forEach((node) => {
+    createPage({
+      path: `/article/${node.frontmatter.slug}`,
+      component: blogPostTemplate,
+      context: { slug: node.frontmatter.slug },
+    });
+  });
+
+  // Create pages for categories
+  result.data.categories.nodes.forEach((node) => {
+    createPage({
+      path: `/category/${node.frontmatter.category}`,
+      component: categoryTemplate,
+      context: { category: node.frontmatter.category },
+    });
+  });
+
+  // Create pages for newsletter posts
+  result.data.newsletters.nodes.forEach((node) => {
+    createPage({
+      path: `/newsletter/${node.frontmatter.slugNew}`,
+      component: newsletterPostTemplate,
+      context: { slugNew: node.frontmatter.slugNew },
+    });
+  });
+  
+};
+
+
+// exports.createPages = async ({ graphql, actions }) => {
+//     const { createPage } = actions
+//     const workTemplate = require.resolve(`./src/templates/blog-post.js`)
+//     const res = await graphql(`
+//         query BlogFindSlug {
+//         allMarkdownRemark(
+//             sort: {frontmatter: {date: DESC}}
+//             filter: {frontmatter: {status: {eq: "public"}}}
+//             ) {
+//             nodes {
+//             frontmatter {
+//                 slug
+//             }
+//             }
+//         }
+//         }
+//     `)
+//     res.data.allMarkdownRemark.nodes.forEach((node) => {
+//         createPage({
+//         path: `/article/${node.frontmatter.slug}`,
+//         component: workTemplate,
+//         context: { slug: node.frontmatter.slug },
+//     })
+//     })
+
+//     const catTemplate = require.resolve(`./src/templates/category-template.js`)
+//     const resa = await graphql(`
+//             query BlogFindCat {
+//                 allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+//                     nodes {
+//                 frontmatter {
+//                     category
+//                 }
+//             }
+//         }
+//     }
+//     `)
+//     resa.data.allMarkdownRemark.nodes.forEach((node) => {
+//         createPage({
+//             path: `/category/${node.frontmatter.category}`,
+//             component: catTemplate,
+//             context: { category: node.frontmatter.category },
+//         })
+//     })
+
+//     const letterTemplate = require.resolve(`./src/templates/newsletter-post.js`)
+//     const result = await graphql(`
+//     query NewFindSlug {
+//         allMarkdownRemark(
+//             sort: {frontmatter: {date: DESC}}
+//             filter: {frontmatter: {category: {eq: "Newsletter"}}}
+//             ) {
+//             nodes {
+//                 frontmatter {
+//                     slugNew
+//                 }
+//             }
+//         }
+//     }
+//     `)
+//     result.data.allMarkdownRemark.nodes.forEach((node) => {
+//         createPage({
+//             path: `/newsletter/${node.frontmatter.slugNew}`,
+//             component: letterTemplate,
+//             context: { slugNew: node.frontmatter.slugNew },
+//         })
+//     })
+// }

@@ -52,7 +52,7 @@ export const query = graphql`
 query WorkPage {
   allMarkdownRemark(
     sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {status: {eq: "public"}}}
+    filter: {frontmatter: {status: {eq: "public"}, category: {ne: "Newsletter"}}}
     limit: 25
     ) {
     nodes {
