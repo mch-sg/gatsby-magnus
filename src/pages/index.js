@@ -24,7 +24,7 @@ export default function Home({ data }) {
         <h3 style={{marginBottom: "20px"}}>I'm an aspiring software engineer and entrepreneur. Every week, I share my learnings from building startup businesses. You will learn how to set guiding principles, and how to make friends by building in public.</h3>
 
         <FormGrid />
-        <h3 style={{marginBottom: "20px", fontSize: "1em", color: "var(--grey)"}}>Join 140+ other solopreneurs.</h3>
+        <h3 style={{marginBottom: "20px", fontSize: "1em", color: "var(--secondary)",opacity: "0.75"}}>Join 140+ other solopreneurs.</h3>
 
       </div>
 
@@ -33,7 +33,7 @@ export default function Home({ data }) {
     </section>
 
     <section>
-    <div className={styles1.work}>
+    <div className={styles1.work} >
 
           <div className={styles1.postWidth}> 
           <div className="initHeading m-title" style={{marginBottom: "20px", textAlign: "left"}}>Latest article</div>
@@ -100,22 +100,22 @@ export default function Home({ data }) {
 
 
 
-          {/* <div>
-              <div className="featured" style={{marginBottom: "5px"}}>
+          <div>
+              <div className="featured" style={{marginBottom: "10px"}}>
                   <div className={styles1.workId}>
-                  <div style={{opacity: "0.25"}} >
+                  <Link to="https://letdir.com" target="_blank">
                       <h3>Letdir</h3>
                       <p style={{textAlign: "left"}} >A newsletter directory</p>
-                    </div>
-                    <p className={styles1.Cat} style={{margin: "auto 0px"}} ></p>
+                    </Link>
                     <p className={styles1.Cat} style={{margin: "auto 0px"}} >Startup</p>
+                    <p className={styles1.date} style={{margin: "auto 0px"}} >Jan 2024</p>
                   </div>
                 </div>
-            </div> */}
+            </div>
 
 
           <div>
-              <div className="featured" style={{marginBottom: "5px"}}>
+              <div className="featured" style={{marginBottom: "10px"}}>
                   {/* <hr style={{margin: "15px auto"}}/> */}
                   <div className={styles1.workId}>
                   <div> {/* Link to={"/work/unicopy"} */}

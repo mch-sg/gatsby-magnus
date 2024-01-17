@@ -19,12 +19,14 @@ export default function BlogPost({ data }) {
           {/* 
           className={styles.res}
           */}
-          <div className="initHeading" style={{marginBottom: "30px"}}>
+          <div className="initHeading">
+          <div className="featured" style={{marginBottom: "30px"}}>
             {/* <hr /> */}
-            <h2 style={{color: "var(--secondary)", marginBottom: "20px", fontSize: "1em"}}>{format('{1} {0}, {2}', dd, mm, yy) } <a className="Tag" href={"/category/" + category}>{category}</a></h2>
+            <h2 style={{color: "var(--secondary)", marginBottom: "-5px", fontSize: "1em"}}>{format('{1} {0}, {2}', dd, mm, yy) } <a className="Tag" href={"/category/" + category}>{category}</a></h2>
             <h1 style={{marginBottom: "0px"}}>{title}</h1>
             {/* <h3 style={{color: "var(--secondarygrey)", marginTop: "0px", fontSize: "1.25em", marginBottom: "0px"}}>by {author}</h3> */}
             {/* <h2>{Subtext}</h2> */}
+          </div>
           </div>
           <div className={styles.featured}>
             {/* <hr /> */}
