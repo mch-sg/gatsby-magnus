@@ -52,7 +52,7 @@ export default function Home({ data }) {
 
                     <p style={{textTransform: ""}} className={styles1.date}>{ format('{1} {0}, {2}', feature.frontmatter.dd, feature.frontmatter.mm, feature.frontmatter.yy) }</p>
                   </div>
-                    <p style={{textAlign: "left"}} className={styles1.date}>{ feature.frontmatter.desc }</p>
+                    <p style={{textAlign: "left", color: "var(--secondary)"}} className={styles1.date}>{ feature.frontmatter.desc }</p>
                   {/* <GatsbyImage className="image" image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
 
                 </div>
