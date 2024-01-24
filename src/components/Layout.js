@@ -32,6 +32,7 @@ export default function Layout({ children }) {
                 <Link to="/policy/privacy-policy" target="_blank">Privacy Policy</Link> <br/>
                 <Link to="/policy/terms-and-conditions" target="_blank">Terms & Conditions</Link> <br/>
                 <Link to="https://magnushvidtfeldt.gumroad.com/" target="_blank">Products</Link> <br/>
+                <Link to="mailto:hi@magnus.so" target="_blank">Contact me</Link> <br/>
             </div>
             <div className="links">
                 <h3 style={{fontWeight:"500", marginBottom: "10px"}}>Socials</h3>

@@ -10,8 +10,6 @@ export default function Work({ data }) {
 
   const works = data.allMarkdownRemark.nodes;
   const dNewFormat = format('%d %B, %Y');
-
-  // format('{0}/{1}/{2}', work.frontmatter.dd, work.frontmatter.mm, work.frontmatter.yy)
   
   return (
     <Layout>
