@@ -83,7 +83,6 @@ export default function Home({ data }) {
                   >
                     {feature.frontmatter.desc}
                   </p>
-                  {/* <GatsbyImage className="image" image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
                 </div>
               ))}
             </div>
