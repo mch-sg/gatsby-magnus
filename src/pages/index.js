@@ -163,7 +163,6 @@ export default function Home({ data }) {
                 <div className={styles1.workId}>
                   <div>
                     {" "}
-                    {/* Link to={"/work/unicopy"} */}
                     <h3>Unicopy</h3>
                     <p style={{ textAlign: "left" }}>Copy unicode characters</p>
                   </div>
