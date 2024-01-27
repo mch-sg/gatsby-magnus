@@ -192,7 +192,6 @@ export default function Home({ data }) {
             <div>
               {newsletters.map((letter) => (
                 <div>
-                  {/* <hr style={{margin: "15px auto"}}/> */}
                   <div className={styles1.workId}>
                     <Link
                       to={"/article/" + letter.frontmatter.slug}
