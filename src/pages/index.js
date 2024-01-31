@@ -83,7 +83,6 @@ export default function Home({ data }) {
                   >
                     {feature.frontmatter.desc}
                   </p>
-                  {/* <GatsbyImage className="image" image={data.file.childImageSharp.gatsbyImageData} alt="banner"/> */}
                 </div>
               ))}
             </div>
@@ -164,7 +163,6 @@ export default function Home({ data }) {
                 <div className={styles1.workId}>
                   <div>
                     {" "}
-                    {/* Link to={"/work/unicopy"} */}
                     <h3>Unicopy</h3>
                     <p style={{ textAlign: "left" }}>Copy unicode characters</p>
                   </div>
@@ -194,7 +192,6 @@ export default function Home({ data }) {
             <div>
               {newsletters.map((letter) => (
                 <div>
-                  {/* <hr style={{margin: "15px auto"}}/> */}
                   <div className={styles1.workId}>
                     <Link
                       to={"/article/" + letter.frontmatter.slug}
