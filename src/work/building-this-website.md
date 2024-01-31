@@ -5,7 +5,7 @@ desc: "Finally, I managed to get my new website up and running. It's something I
 slug: building-this-website
 category: "Site"
 letter: "0"
-status: "draft"
+status: "public"
 
 date: "2024-02-02"
 dd: "2"
