@@ -231,7 +231,7 @@ export const query = graphql`
           category: { ne: "Newsletter" }
         }
       }
-      limit: 25
+      limit: 15
     ) {
       nodes {
         frontmatter {
@@ -254,7 +254,7 @@ export const query = graphql`
           category: { eq: "Newsletter" }
         }
       }
-      limit: 25
+      limit: 15
     ) {
       nodes {
         frontmatter {
